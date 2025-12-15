@@ -1,0 +1,36 @@
+*
+!.gitignore
+!.config/
+
+# Hyprland configs
+!.config/hypr/
+!.config/hypr/*
+
+# Waybar configs
+!.config/waybar/
+!.config/waybar/*
+
+# Dunst configs
+!.config/dunst/
+!.config/dunst/*
+
+# Btop configs
+!.config/btop/
+!.config/btop/*
+
+# Kitty configs
+!.config/kitty/
+!.config/kitty/*
+
+# Nvim configs
+!.config/nvim/
+!.config/nvim/*
+
+# Vicinae configs
+!.config/vicinae/
+!.config/vicinae/*
+
+!Wallpapers/
+!Wallpapers/*
+
+!.zshrc

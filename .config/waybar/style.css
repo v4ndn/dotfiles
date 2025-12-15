@@ -1,0 +1,129 @@
+* {
+  border-bottom: 2px solid rgba(49, 49, 49, 1);
+  border: none;
+  border-radius: 0;
+  font-family: "Ubuntu Nerd Font";
+  font-weight: 500;
+  color: rgba(170,170,170, 1);
+  min-height: 0;
+}
+
+#waybar {
+  /* padding: 0px 40px; */
+  background: rgba(0,0,0,1);
+  margin: 16px 0;
+  /* border-bottom: 2px solid rgba(49, 49, 49, 1); */
+  border-bottom: 2px solid rgba(49, 49, 49, 1);
+}
+#custom-apps {
+  
+  border-right: 2px solid rgba(49, 49, 49, 1);
+  padding: 0 4px;
+  border-radius: 0px;
+  font-size: 16px;
+}
+#workspaces {
+  
+  border-right: 2px solid rgba(49, 49, 49, 1);
+  padding: 0 4px;
+  border-radius: 0px;
+}
+
+#workspaces button {
+  padding: 0 2px;
+  background: transparent;
+  color: #71717a;
+  font-size: 8px;
+  transition: all ease-out 0.1s;
+}
+
+#workspaces button.focused {
+  color: #f4f4f5;
+  font-size: 12px;
+}
+#window {
+  
+  border-right: 2px solid rgba(49, 49, 49, 1);
+  padding: 0 4px;
+}
+.modules-right {
+  
+  
+  padding: 0 4px;
+}
+#pulseaudio,
+#tray,
+#language {
+  border-left: 2px solid rgba(49, 49, 49, 1);
+  padding: 0 8px;
+}
+#clock,
+#battery,
+#cpu,
+#memory,
+#network,
+#custom-spotify,
+#custom-warp,
+#custom-zapret,
+#mode {
+  border-right: 2px solid rgba(49, 49, 49, 1);
+  padding: 0 8px;
+}
+
+#clock {
+  border-right: 2px solid rgba(49, 49, 49, 1);
+  border-left: 2px solid rgba(49, 49, 49, 1);
+
+
+}
+#battery {
+}
+
+#battery icon {
+  color: red;
+}
+
+#battery.charging {
+}
+
+@keyframes blink {
+  to {
+    
+    color: black;
+  }
+}
+
+#battery.warning:not(.charging) {
+  color: white;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#cpu {
+}
+
+#memory {
+}
+
+#network {
+}
+
+#network.disconnected {
+  background: #f53c3c;
+}
+
+#pulseaudio {
+}
+
+#pulseaudio.muted {
+}
+
+#custom-spotify {
+  color: rgb(102, 220, 105);
+}
+
+#tray {
+}

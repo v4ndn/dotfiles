@@ -1,0 +1,119 @@
+{
+  "layer": "top", // Waybar at top layer
+  "position": "top", // Waybar at the bottom of your screen
+  "height": 24, // Waybar height
+  // "width": 1366, // Waybar width
+  //, Choose the order of the modules
+  "modules-center": [
+
+    "clock"
+  ],
+  "modules-left": [
+    "custom/warp",
+    "custom/zapret",
+    "cpu",
+    "memory"
+  ],
+  "modules-right": [
+    "pulseaudio",
+    "hyprland/language",
+    "tray",
+    "battery"
+  ],
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "socials": "\ue217",
+      "default": ""
+    },
+    "all-outputs": true,
+    "disable-scroll": true
+  },
+  "tray": {
+    // "icon-size": 21,
+    "spacing": 10
+  },
+  "custom/apps": {
+    "format": "\udb81\udc63",
+    "on-click": "rofi -show drun"
+  },
+  "hyprland/mode": {
+    "format": "<span style=\"italic\">{}</span>"
+  },
+  "hyprland/language": {
+    "format": "{short}"
+  },
+  "clock": {
+    "format-alt": "{:%Y-%m-%d}"
+  },
+  "cpu": {
+    "format": "{usage}% "
+  },
+  "custom/gammastep": {
+    "format": "{icon} ",
+    "format-source": "{icon} ",
+    "format-icons": [""],
+    "on-scroll-up": "bash ~/.config/waybar/nightmode/gamma_inc.sh",
+    "on-scroll-down": "bash ~/.config/waybar/nightmode/gamma_dec.sh",
+    "on-click-left": "bash ~/.config/waybar/nightmode/gamma_toggle.sh"
+  },
+  "custom/zapret": {
+    "exec": "$HOME/.config/waybar/zapretSwitcher.sh",
+    "on-click": "$HOME/.config/waybar/zapretSwitcher.sh switch",
+    "interval": 3,
+    "return-type": "json",
+    "format": "{}"
+  },
+  "custom/warp": {
+    "exec": "$HOME/.config/waybar/warpSwitcher.sh",
+    "on-click": "$HOME/.config/waybar/warpSwitcher.sh switch",
+    "interval": 3,
+    "return-type": "json",
+    "format": "{}"
+  },
+  "memory": {
+    "format": "{}% "
+  },
+  "battery": {
+    "bat": "BAT0",
+    "states": {
+      // "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{capacity}% {icon}",
+    // "format-good": "", // An empty format will hide the module
+    // "format-full": "",
+    "format-icons": ["", "", "", "", ""]
+  },
+  "network": {
+    // "interface": "wlp2s0", // (Optional) To force the use of this interface
+    "format-wifi": "{essid} ({signalStrength}%) ",
+    "format-ethernet": "{ipaddr} ",
+    "format-disconnected": "Disconnected ⚠"
+  },
+  "pulseaudio": {
+    //"scroll-step": 1,
+    "format": "{volume}% {icon}",
+    "format-bluetooth": "{volume}% {icon}",
+    "format-muted": "",
+    "format-icons": {
+      "headphones": "\uf025",
+      "hdmi": "\udb82\udc41",
+      "handsfree": "\uf2a7",
+      "headset": "\udb80\udece",
+      "phone": "\uf10b",
+      "portable": "",
+      "car": "",
+      "default": ["\uf027", "\uf028"]
+    },
+    "on-click": "pavucontrol"
+  },
+  "custom/spotify": {
+    "format": " {}",
+    "max-length": 40,
+    "interval": 30, // Remove this if your script is endless and write in loop
+    "exec": "$HOME/.config/waybar/mediaplayer.sh 2> /dev/null", // Script in resources folder
+    "exec-if": "pgrep spotify"
+  }
+}
