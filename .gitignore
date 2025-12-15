@@ -25,6 +25,7 @@
 # Nvim configs
 !.config/nvim/
 !.config/nvim/*
+!.config/nvim/**/*
 
 # Vicinae configs
 !.config/vicinae/
