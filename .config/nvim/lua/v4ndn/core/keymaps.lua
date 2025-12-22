@@ -42,7 +42,20 @@ keymap.set("n", "<C-j>", "<cmd>wincmd j<CR>")
 keymap.set("n", "<C-k>", "<cmd>wincmd k<CR>")
 keymap.set("n", "<C-l>", "<cmd>wincmd l<CR>")
 
+-- local state = "esc"
 keymap.set("n", "q", "<Esc>")
+keymap.set("n", "Q", "q")
+-- keymap.set("n", "Q", function()
+--   if state == "esc" then
+--     state = "q"
+--     keymap.set("n", "q", "q")
+--     vim.notify("Q mode changed to default")
+--   else
+--     state = "esc"
+--     keymap.set("n", "q", "<Esc>")
+--     vim.notify("Q mode changed to esc")
+--   end
+-- end)
 
 keymap.set("n", "<leader>fg", "<cmd>Easypick changed_files<CR>")
 

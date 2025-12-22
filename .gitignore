@@ -1,6 +1,7 @@
 *
 !.gitignore
 !.config/
+!.local/
 
 # Hyprland configs
 !.config/hypr/
@@ -31,7 +32,12 @@
 !.config/vicinae/
 !.config/vicinae/*
 
+# Wallpapers
 !Wallpapers/
 !Wallpapers/*
+
+# Binaries 
+!.local/bin/
+!.local/bin/*
 
 !.zshrc
