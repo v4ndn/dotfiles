@@ -19,6 +19,7 @@ local function filter_empty_string(list)
   local next = {}
   for idx = 1, #list do
     if list[idx] ~= nil and list[idx].text ~= "" then
+      list[idx].realidx = idx
       table.insert(next, list[idx])
     end
   end
@@ -30,9 +31,10 @@ end
 local harpoon_source = {
   finder = function()
     local output = {}
-    for _, item in ipairs(filter_empty_string(require("harpoon"):list().items)) do
+    for idx, item in ipairs(filter_empty_string(require("harpoon"):list().items)) do
       if item and item.value:match("%S") then
         table.insert(output, {
+          realidx = item.realidx,
           text = item.value,
           file = item.value,
           pos = { item.context.row, item.context.col },
@@ -69,8 +71,7 @@ local harpoon_source = {
 
 
       for _, v in pairs(picker.list.selected) do
-        harpoon:list():remove_at(v.idx)
-        -- vim.notify(tostring(k) .. " " .. tostring(v), vim.log.levels.INFO)
+        harpoon:list():remove_at(v.realidx)
       end
 
       picker:refresh()
