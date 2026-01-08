@@ -1,7 +1,10 @@
 {
   "layer": "top", // Waybar at top layer
   "position": "top", // Waybar at the bottom of your screen
-  "height": 24, // Waybar height
+  "height": 32, // Waybar height
+  "margin-top": 8,
+  "margin-left": 8,
+  "margin-right": 8,
   // "width": 1366, // Waybar width
   //, Choose the order of the modules
   "modules-center": [
