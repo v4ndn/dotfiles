@@ -30,6 +30,7 @@ keymap.set("n", "<leader>ci", "<cmd>lua vim.lsp.buf.implementation()<CR>",
            { desc = "see coede implementation" })
 keymap.set("n", "<leader>cf", vim.lsp.buf.format)
 keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
+keymap.set("n", "<leader>cr", vim.lsp.buf.rename)
 
 keymap.set("i", "jk", "<Esc>", { noremap = true, silent = true })
 keymap.set("t", "jk", "<C-\\><C-N>", { noremap = true, silent = true })
