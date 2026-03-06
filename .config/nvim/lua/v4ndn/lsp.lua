@@ -1,4 +1,5 @@
 vim.lsp.enable({ "biome", "gopls", "vtsls", "luals", "nills", "emmet", "harper" })
+  "tailwindcss", "svelte" })
 -- vim.lsp.inlay_hint.ehable(true)
 
 local severity = vim.diagnostic.severity

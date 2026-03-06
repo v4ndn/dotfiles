@@ -152,6 +152,18 @@ return {
         sources = { harpoon = harpoon_source },
         hidden = true,
         ignored = true,
+        sources = {
+          harpoon = harpoon_source,
+          explorer = {
+            win = {
+              list = {
+                wo = {
+                  number = true, relativenumber = true
+                }
+              }
+            }
+          }
+        },
       },
 
       terminal = {
