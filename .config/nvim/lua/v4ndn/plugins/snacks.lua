@@ -150,6 +150,8 @@ return {
       bigfile = {},
       picker = {
         sources = { harpoon = harpoon_source },
+        hidden = true,
+        ignored = true,
       },
 
       terminal = {
@@ -211,6 +213,13 @@ return {
           Snacks.picker.buffers(sidebarPreset(30, 0.4));
         end,
         desc = "Buffers"
+      },
+      {
+        "<leader>de",
+        function()
+          Snacks.picker.diagnostics(sidebarPreset(60, 0.7))
+        end,
+        desc = "Grep"
       },
       {
         "<leader>fg",

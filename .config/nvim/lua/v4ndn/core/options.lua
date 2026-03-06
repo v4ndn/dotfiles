@@ -1,4 +1,5 @@
 vim.opt.relativenumber = true
+vim.g.maplocalleader = ','
 vim.opt.number = true
 
 vim.opt.showmode = false
