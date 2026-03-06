@@ -72,7 +72,6 @@ return {
     keymap = {
       ["<C-space>"] = { function(cmp) cmp.show({ providers = { "snippets" } }) end },
       ["<C-e>"] = { "hide", "fallback" },
-      ["<CR>"] = { "accept", "fallback" },
 
       ["<Tab>"] = {
         function(cmp)
@@ -107,8 +106,7 @@ return {
       default = { "lsp", "path", "snippets", "buffer" },
       providers = {
         lsp = {
-          min_keyword_length = 2, -- Number of characters to trigger porvider
-          score_offset = 0,       -- Boost/penalize the score of the items
+          -- min_keyword_length = 2, -- Number of characters to trigger porvider score_offset = 0,       -- Boost/penalize the score of the items
         },
         path = {
           min_keyword_length = 0,

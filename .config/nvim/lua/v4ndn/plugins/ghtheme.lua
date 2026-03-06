@@ -8,9 +8,9 @@ return {
       palettes = {
         all = {
           border = {
-            default = "#313131",
-            muted = "#313131",
-            subtle = "#313131",
+            default = "#111111",
+            muted = "#111111",
+            subtle = "#111111",
           },
         },
       },
